@@ -3,6 +3,14 @@
 // 2 para papel 
 // 3 para pedra 
 
+//Grupo: 
+//Tatiane Lacerda Gardin
+//Thiago Vale
+//Narayana Brahmajyoti
+//André Luiz da Silva Almeida
+//Moisés dos Santos Andrade
+
+
 
 
 // função para validar o valor inserido no prompt
