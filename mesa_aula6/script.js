@@ -1,3 +1,10 @@
+//Tatiane Gardin
+//Matheus Almeida
+//Roberto Castro
+//Erick Niciolli
+//Cristiane Rodrigues
+
+
 let divTigre = document.createElement('div');
 let divLeao = document.createElement('div');
 let divLeopardo = document.createElement('div');

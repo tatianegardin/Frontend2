@@ -1,3 +1,9 @@
+//Tatiane Gardin
+//Roberto Castro
+//Matheus Almeida
+//Ladislau Alexandre 
+//Rafael Lovera 
+
 let valor = prompt('Digite o nome de um animal');
 let url = prompt('coloque sua url');
 let div = document.querySelectorAll('.item');
