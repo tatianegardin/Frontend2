@@ -3,6 +3,7 @@
 //Matheus Almeida
 //Ladislau Alexandre 
 //Rafael Lovera 
+//Tiago Saraiva
 
 let valor = prompt('Digite o nome de um animal');
 let url = prompt('coloque sua url');
