@@ -30,11 +30,11 @@ botaoLimpar.onclick = () => valor = 0 // quando clicar no botão Limpar a variá
 
     // criação de uma nova tag para retornar ao usuário
 
-let p = document.createElement('p');
-let form = document.querySelector('form');
-
-function nomeAtualizado(){
+    let form = document.querySelector('form');
     
+    function nomeAtualizado(){
+        
+    let p = document.createElement('p');
     p.innerText = ` Olá ${nome.value}! \n você pressionou ${valor} teclas para preencher seu nome `
     form.appendChild(p); 
     
