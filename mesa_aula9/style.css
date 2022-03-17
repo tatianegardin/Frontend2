@@ -1,0 +1,37 @@
+*{
+    font-family: sans-serif;
+}
+header{
+    height: 10%;
+    text-align: center;
+}
+fieldset{
+    padding: 1rem;
+    width: 40vw;
+    margin: auto;
+    border-radius: 1rem;
+}
+input{
+    display: block;
+    align-self: center;
+    margin: 1rem auto;
+}
+
+button{
+    margin: 0.5rem;
+}
+
+.sessao{
+    text-align: center;
+}
+
+#resultado{
+
+    padding: 1rem;
+}
+
+p{
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1rem;
+}

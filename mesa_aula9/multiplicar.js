@@ -1,1 +1,0 @@
-let multiplica = (a,b) => a*b 
