@@ -24,6 +24,7 @@ nome.onkeypress = (e) => {
 }
 
 let botaoLimpar = document.querySelector('#botaoLimpar');
+let p = document.createElement('p');
 
 botaoLimpar.onclick = () => valor = 0 // quando clicar no botão Limpar a variável valor será zerada
 
@@ -34,7 +35,6 @@ botaoLimpar.onclick = () => valor = 0 // quando clicar no botão Limpar a variá
     
     function nomeAtualizado(){
         
-    let p = document.createElement('p');
     p.innerText = ` Olá ${nome.value}! \n você pressionou ${valor} teclas para preencher seu nome `
     form.appendChild(p); 
     
