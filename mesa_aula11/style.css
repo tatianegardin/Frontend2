@@ -1,0 +1,32 @@
+*{
+    font-family: serif;
+
+}
+input{
+    display: block;
+    margin: 0.5rem auto;
+    width: 70%;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+
+}
+label{
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+main{
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 25vh;
+}
+fieldset{
+    border-radius: 2rem;
+}
+form{
+    text-align: center;
+}
+button{
+    margin: 0.2rem;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+}
