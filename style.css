@@ -8,7 +8,7 @@ body{
 }
 header{
     text-align: center;
-    height: 5vh;
+
     background-color: #4A4E69;
     border-radius: 1rem;
     padding: 2rem;
@@ -25,7 +25,7 @@ header{
 
 }
 .card-item{
-    width: 20vw;
+    width: 90vw;
     background-color: #9A8C98 ;
     padding: 1rem;
     border:#F2E9E4 solid 1px ;
@@ -55,5 +55,17 @@ a:hover{
 }
 a::after{
     content: ' ➜';
+}
+
+@media screen and (min-width: 768px){
+    .card-item{
+         width: 40vw;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .card-item{
+         width: 20vw;
+    }
 }
 
