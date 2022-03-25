@@ -16,11 +16,11 @@ function adicionarAoObjeto(){
 
 function criarObjetoStorage(objeto){
     let objetoConvertido = JSON.stringify(objeto)
-    localStorage.setItem(1,objetoConvertido)
+    localStorage.setItem(2,objetoConvertido)
 }
 
 function capturarObjeto(){
-    let objetoCapturado = localStorage.getItem(1)
+    let objetoCapturado = localStorage.getItem(2)
     return JSON.parse(objetoCapturado)
 }
 
