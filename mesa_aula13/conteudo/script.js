@@ -90,7 +90,7 @@ function validarInput(input, print){
 
     input.addEventListener('blur', () => {
         if(input.value != ''){
-            input.style.borderColor = '#adb5bd'
+            input.style.borderColor = ''
             print.innerHTML = ''
         }else{
             input.style.borderColor= 'red'
