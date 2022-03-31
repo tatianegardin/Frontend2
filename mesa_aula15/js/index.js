@@ -70,14 +70,21 @@ let consultandoBaseDeDados = new Promise((resolve, reject) => {
                 "mensagem": "Base de dados inexistente."
             });
         } else {
-            resolve(baseDeDados.resultado[0]);
+            resolve(baseDeDados);
         }
     }, 2000);
 
 });
 
 // Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
-consultandoBaseDeDados.then(
+consultandoBaseDeDados.then(function(dados){
+    return dados.resultado
+    
+})
+.then(function(dados){
+    return dados[0]
+})
+.then(
         function renderizarDadosUsuario(dados) {
             /* -------------------------------- TAREFAS -------------------------------- */
             // Aqui  devem desenvolver uma função que é exibida na tela:
