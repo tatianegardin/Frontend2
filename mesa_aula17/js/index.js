@@ -14,13 +14,13 @@ function solicitandoAPI(){
         //manipulamos a resposta
         return data.results
     })
-    .then(resultado =>{
+    .then(data =>{
         
-        return resultado[0]
+        return data[0]
     })
-    .then(resultado =>{
+    .then(data =>{
 
-       renderizarDadosUsuario(resultado)
+       renderizarDadosUsuario(data)
     }); 
 }
 
