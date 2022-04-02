@@ -3,9 +3,9 @@ let botao = document.querySelector('.btnContainer');
 let div = document.querySelector('.card')
 
 
-botao.addEventListener('click', evento =>{
-    evento.preventDefault()
-    
+// criando função para solicitar API quando necessário
+function solicitandoAPI(){
+
     fetch('https://randomuser.me/api/')
     .then(response => {
         return response.json()
@@ -19,13 +19,12 @@ botao.addEventListener('click', evento =>{
         return resultado[0]
     })
     .then(resultado =>{
-        console.log(resultado);
-        
-        renderizarDadosUsuario(resultado)
-    });
-})
 
+       renderizarDadosUsuario(resultado)
+    }); 
+}
 
+// função para renderizar no html
 function renderizarDadosUsuario(dados) {
     /* -------------------------------- Tarefa 1 -------------------------------- */
     // Aqui devem desenvolver uma função que seja exibida na tela:
@@ -37,11 +36,21 @@ function renderizarDadosUsuario(dados) {
     <h2>${dados.name.first} ${dados.name.last}</h2>
     <p><strong>Email:</strong> ${dados.email}</p>`
 
-
 }
+
+// Ao abrir a página será feito uma solicitação a API
+solicitandoAPI()
+
 
 
 /* --------------------------- Tarefa 2 (extra) --------------------------- */
 // Aqui você pode ir para o ponto extra de usar o botão que está comentado no HTML.
 // Você pode descomentar o código no index.html e usar esse botão para executar uma nova solicitação API, sem recarregar a página.
 // Cabe aos desenvolvedores decidirem qual bloco de código deve ser contido dentro de uma função para que ele possa ser executado toda vez que um clique de botão for realizado.
+
+
+// sempre que clicar no botão será feito uma solicitação a API
+botao.addEventListener('click', evento =>{
+    evento.preventDefault()
+    solicitandoAPI()
+})
