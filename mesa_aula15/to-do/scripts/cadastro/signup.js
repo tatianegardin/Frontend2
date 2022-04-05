@@ -27,33 +27,51 @@ let campoRepetirSenhaNormalizado
 
 // criando objeto
 let novoUsuario = {
-        nome: '',
-        apelido: '',
+        firstName: '',
+        lastName: '',
         email: '',
-        senha: '',
+        password: '',
 
     }
 
 btnCriarConta.addEventListener('click', evento =>{
-
-    if(liberaBotao())
-    //retirando espaços dos campos
-    campoNomeNormalizado = retiraEspacosDeUmValor(campoNome.value)
-    campoApelidoNormalizado = retiraEspacosDeUmValor(campoApelido.value)
-    campoEmailNormalizado = retiraEspacosDeUmValor(campoEmail.value)
-    campoSenhaNormalizado = retiraEspacosDeUmValor(campoSenha.value)
-    campoRepetirSenhaNormalizado = retiraEspacosDeUmValor(campoRepetirSenha.value)
-
-    //colocando campos em letra minúscula
-    campoNomeNormalizado = converteValorRecebidoParaMinusculo(campoNome.value)
-    campoApelidoNormalizado = converteValorRecebidoParaMinusculo(campoApelido.value)
-    campoEmailNormalizado = converteValorRecebidoParaMinusculo(campoEmail.value)
+    if(liberaBotao()){
+        evento.preventDefault()
+        
+        //retirando espaços dos campos
+        campoNomeNormalizado = retiraEspacosDeUmValor(campoNome.value)
+        campoApelidoNormalizado = retiraEspacosDeUmValor(campoApelido.value)
+        campoEmailNormalizado = retiraEspacosDeUmValor(campoEmail.value)
+        campoSenhaNormalizado = retiraEspacosDeUmValor(campoSenha.value)
+        campoRepetirSenhaNormalizado = retiraEspacosDeUmValor(campoRepetirSenha.value)
     
-    // atribuindo valores ao objeto 
-    novoUsuario.nome = campoNomeNormalizado
-    novoUsuario.apelido = campoApelidoNormalizado
-    novoUsuario.email = campoEmailNormalizado
-    novoUsuario.senha = campoSenhaNormalizado
+        //colocando campos em letra minúscula
+        campoNomeNormalizado = converteValorRecebidoParaMinusculo(campoNome.value)
+        campoApelidoNormalizado = converteValorRecebidoParaMinusculo(campoApelido.value)
+        campoEmailNormalizado = converteValorRecebidoParaMinusculo(campoEmail.value)
+        
+        // atribuindo valores ao objeto 
+        novoUsuario.firstName = campoNomeNormalizado
+        novoUsuario.lastName = campoApelidoNormalizado
+        novoUsuario.email = campoEmailNormalizado
+        novoUsuario.password = campoSenhaNormalizado
+
+        let objetoUsuario = JSON.stringify(novoUsuario)
+
+        let urlEndPoint = 'https://ctd-todo-api.herokuapp.com/v1/users'
+
+        let endPoint = {
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body: objetoUsuario
+        }
+
+        fetch(urlEndPoint, endPoint)
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
 
 
 })
