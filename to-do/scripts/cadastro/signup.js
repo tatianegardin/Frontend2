@@ -36,8 +36,8 @@ let novoUsuario = {
     }
 
 btnCriarConta.addEventListener('click', evento =>{
+    mostrarSpinner()
     evento.preventDefault()
-    mostrarSpinner();
     if(liberaBotao())
     //retirando espaços dos campos
     campoNomeNormalizado = retiraEspacosDeUmValor(campoNome.value)
@@ -47,9 +47,9 @@ btnCriarConta.addEventListener('click', evento =>{
     campoRepetirSenhaNormalizado = retiraEspacosDeUmValor(campoRepetirSenha.value)
 
     //colocando campos em letra minúscula
-    campoNomeNormalizado = converteValorRecebidoParaMinusculo(campoNome.value)
-    campoApelidoNormalizado = converteValorRecebidoParaMinusculo(campoApelido.value)
-    campoEmailNormalizado = converteValorRecebidoParaMinusculo(campoEmail.value)
+    campoNomeNormalizado = converteValorRecebidoParaMinusculo(campoNomeNormalizado)
+    campoApelidoNormalizado = converteValorRecebidoParaMinusculo(campoApelidoNormalizado)
+    campoEmailNormalizado = converteValorRecebidoParaMinusculo(campoEmailNormalizado)
     
     // atribuindo valores ao objeto 
     novoUsuario.firstName = campoNomeNormalizado
@@ -74,37 +74,29 @@ btnCriarConta.addEventListener('click', evento =>{
     fetch(urlEndPoint, endPoint)
 
     .then(response => {
-        if(response.status == 201 ){
-            console.log(response)
+        if(response.status == 201){      
             return response.json()
 
         }else{
-            console.log(response)
             throw response.status
         }
     })
     .then(data => {
         ocultarSpinner()
-        window.location = 'index.html'
-        return 
+        window.location.href = 'index.html'
+        // swal.fire('Usuário criado com sucesso!', '', 'success')
+        // document.querySelector('.swal2-confirm').addEventListener('click', ()=> window.location.href = 'index.html')
     })
-
     .catch(error => {
+        ocultarSpinner()
         if(error == 400){
-            ocultarSpinner()
             exibirErro.innerText = "Usuário já registrado"
             exibirErroApi(exibirErro)
         }else{
-            ocultarSpinner()
             exibirErro.innerText = "Tentar novamente mais tarde"
             exibirErroApi(exibirErro)
         }
     })
-
-     
-
-
-
 })
 
 

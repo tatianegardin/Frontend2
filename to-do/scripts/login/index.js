@@ -20,10 +20,10 @@ const usuarioObjeto = {
 validacaoTelaDeLogin()
 
 botaoAcessar.addEventListener('click', function(evento){
+    mostrarSpinner()
 
     if (validacaoTelaDeLogin()) {
         evento.preventDefault()
-        mostrarSpinner()
         
         //Normalizando as informações
         campoEmailLoginNormalizado = retiraEspacosDeUmValor(campoEmailLogin.value);
@@ -58,13 +58,13 @@ botaoAcessar.addEventListener('click', function(evento){
         })
         .then(data => data.jwt)
         .then(data => {
-            ocultarSpinner()
             loginOk(data)
+            ocultarSpinner()
         })
         .catch(error => {
             if(error == 404 || error == 400){
                 ocultarSpinner()
-                exibeErro.innerText = "Usuário ou senha incorreto."
+                exibeErro.innerText = "Usuário/senha incorretos."
                 exibirErroApi(exibeErro)
             }else{
                 ocultarSpinner()

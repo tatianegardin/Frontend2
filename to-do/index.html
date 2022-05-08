@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+
+  <link rel="shortcut icon" href="assets/favicon(1).ico">
+  <link rel="shortcut icon" href="assets/favicon.png">
+
+  <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+  <link rel="stylesheet" href="styles/acesso.css">
+  <link rel="stylesheet" href="styles/spinner.css">
+
+  <!-- ---------------------- lógica aplicada no login ----------------------- -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="left">
+    <img src="./assets/pessoa-login.png" alt="">
+  </div>
+
+  <div class="right">
+
+    <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+      <h1>Acessar</h1>
+      <p id="exibeErro">
+      </p>
+
+
+      <label>
+        Email:
+        <input id="inputEmail" type="text">
+        <small id="inputEmailValidacao"></small>
+      </label>
+      <label>
+        Senha:
+        <input id="inputPassword" type="password">
+        <img src="./assets/olho-vermelho.png" alt="Icone olho para mostrar senha" id="olho">        
+        <small id="inputSenhaValidacao"></small>
+      </label>
+
+      <button id="botaoAcessar" type="submit">Acessar</button>
+
+    </form>
+    <div class="ingressar">
+      <a href="signup.html">Não possui conta? Crie agora mesmo</a>
+    </div>
+    
+    <!-- Botão para acionar modal -->
+    
+      <label for="modalExemplo" class="abrirModal"><img src="./assets/member-card.png" alt="" class="imgCard"></label>
+      <input type="checkbox" id="modalExemplo" class="checkboxModal">
+    
+    <!-- Modal -->
+    <div class="modal" >
+      <label for="modalExemplo" class="fecharModal">X</label>
+      <div class="conteudoModal">
+        <h1><strong>Integrantes</strong></h1>
+        <div class="integrante 1">
+          <img src="./assets/Carlos_Junior.png" alt=""> 
+          <h2>Carlos Junior</h2> 
+          <a href="https://github.com/CJBiohacker"><img src="./assets/github.png"></a>  
+          <a href="https://www.linkedin.com/in/carlosjunior137/"><img src="./assets/linkedin.png"></a> 
+        </div>
+        <div class="integrante 2">
+          <img src="./assets/Miguel_Oduber.png" alt="" > 
+          <h2>Miguel Oduber</h2>
+          <a href="https://github.com/estudio7"><img src="./assets/github.png"></a>  
+          <a href="https://www.linkedin.com/in/migueloduber/"><img src="./assets/linkedin.png"></a>        
+        </div>
+        <div class="integrante 3">
+          <img src="./assets/Narayana_Brahmajyoti.jpg" alt="" > 
+        <h2>Narayana Brahmajyoti</h2>
+        <a href="https://github.com/Narayana-Brahmajyoti"><img src="./assets/github.png"></a>  
+        <a href="https://www.linkedin.com/in/narayana-brahmajyoti/"><img src="./assets/linkedin.png"></a>         
+        </div>
+        <div class="integrante 4">
+          <img src="./assets/Tatiane_Gardin.png" alt="" >
+          <h2>Tatiane Gardin</h2>
+          <a href="https://github.com/tatianegardin"><img src="./assets/github.png"></a>  
+          <a href="https://www.linkedin.com/in/tatiane-lacerda-gardin-449438165/"><img src="./assets/linkedin.png"></a>               
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="./scripts/validacoes/utils.js"></script>
+  <script src="./scripts/animacoes/loaders.js"></script>
+  <script src="./scripts/login/index.js"></script>
+
+</body>
+
+</html>
