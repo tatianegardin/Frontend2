@@ -1,0 +1,152 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Nunito, sans-serif;
+}
+
+.h{
+     color: #FCB614;
+}
+body{
+     background-color: #FCB614
+}
+
+.header{
+     background: #ffffff;
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     position: relative;
+     width: 100%;
+     top: -5px;
+     border-radius: 10px;
+     box-shadow: 0 2px 3px #292A29;
+}
+
+.side-logo{
+     background-color: #292A29;
+     color: #ffffff;
+     padding: 2px;
+     border-radius: 5px;
+     text-align: center;
+     box-shadow: 0 2px 3px rgb(43, 43, 43);
+}
+
+.button-header{
+     font-size: 1.5rem;
+     font-weight: 700;
+     border: none; 
+     box-shadow: 0 2px 3px rgb(43, 43, 43);  
+     cursor: pointer;
+     background-color: #292A29;
+     color: #ffffff;  
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     right: 2rem;
+     top: 0.5rem;
+}
+main {
+     min-height: 88vh;
+     margin-bottom: 4rem;
+}
+
+.footer{
+     background: #ffffff;
+     display: flex;
+     justify-content: space-between;
+     padding: 10px;
+     width: 100%;
+     bottom: -5px;
+     left: 0;
+     border-radius: 10px;
+     box-shadow: 3px 2px 3px 2px #292A29;
+     position: fixed;
+}
+
+.description-footer{
+     background-color: #292A29;
+     color: #ffffff;
+     border-radius: 5px;
+     box-shadow: 3px 2px 3px #292A29
+}
+
+.modal-input{
+     box-shadow: 0 0 0.5em rgb(83, 83, 83);
+     color: #292A29;
+     border-style: none;
+     display: block;
+     font-size: 1rem;
+     width: 90%;
+     max-width: 600px;
+     padding: 0.5rem;
+     font-size: 1.2rem ;
+     border-radius: 0.5rem;
+     border: 1px solid rgb(179, 176, 176);
+     margin: 1rem 0;
+}
+
+.modal-body{
+     font-weight: 600;
+     font-size: 1rem;
+     margin-left: 1rem;
+
+}
+
+
+.cards{
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+}
+
+.card-item{
+     background-color: rgb(255, 255, 255);
+     width: 90vw;
+     margin: 1rem 0;
+     padding: 1rem;
+     border-radius: 1rem;
+     box-shadow: 0 2px 3px #292A29
+}
+
+.card-descricao{
+     margin: 0 10px 20px 0;
+     text-align: justify;
+}
+
+.card-titulo{
+     font-size: 2rem;
+     font-weight: 700;
+
+}
+
+.card-img{
+     border-radius: 0.5rem;
+  
+
+}
+#btn-ok{
+     background-color: #292A29;
+}
+small{
+     display: block;
+     margin-top: -0.5rem;
+     margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 768px){
+     .card-item{
+          width: 40vw;
+     }
+}
+
+@media screen and (min-width: 1024px){
+     .card-item{
+          width: 30vw;
+     }
+}

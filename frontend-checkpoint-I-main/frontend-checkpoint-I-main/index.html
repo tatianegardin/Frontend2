@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Frontend II | Checkpoint I</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="./CSS/style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,700&family=Nunito:ital,wght@1,700&family=Yellowtail&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+          <div class="header">
+               <h2 class="side-logo">D<span class="h">H</span>  </h2>
+               <button id="btn-modal" type="button" class="btn btn-primary button-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    +
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">  
+                          <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                             <label for="titulo">Digite um título:</label>
+                             <input class="modal-input" type="text" id="titulo" placeholder="Título">
+                             <small id="validacaoTitulo"></small>
+                             <label for="conteudo">Digite uma descrição:</label>
+                             <textarea class="modal-input" name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                             <small id="validacaoConteudo"></small>
+                              <label for="url" >URL da imagem:</label>
+                              <input class="modal-input" type="text" id="url" placeholder="Insira a URL de uma imagem">
+                              <small id="validacaoURL"></small>
+                         </div>
+                        <div class="modal-footer">
+                          <button id="btn-cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button id="btn-ok" type="submit" class="btn btn-primary " data-bs-dismiss="modal" >Enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+     </header>
+     <main>
+          <section class="cards">    
+    
+          </section>
+
+     </main>
+     
+     <footer>
+          <div class="footer">
+               <p class="side-logo">D<span class="h">H</span></p>
+               <h5 class="description-footer">Feito Por: Jonathan A. Possoli, Ladislau A., Tatiane G.</h5>
+          </div>
+     </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="./JS/app.js"></script>
+
+</body>
+</html>
